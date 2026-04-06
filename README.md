@@ -4,9 +4,34 @@ An application of the IG criterion taken from Shannon's information theory to ca
 # ATTENTION, THERE IS ONE IMPORTANT PREREQUISITE:
 “Knowing how to read”
 
-#Instructions
+# FILES LIST
 
-- NOMDLv3.py = New version of the program with changes to the greedy algorithm and threshold. Various bugs, duplicate codes, have been fixed and it now works with all CSV sizes (I have implemented new GUI, settled partition of code which gave errors if used incorrectly. It's practically finished, but I'd like to add the possibility that the program will detect if the "q" (which we gave it) is incorrect. (Perhaps the CSV column doesn't have the same parameters as the input, or the program will warn you if it doesn't make sense to look for the explanation in that particular data...)).
-- NOMDLv3.7z = This is the zip file containing the executable with a graphical interface. It will ask you for .csv files to insert. I have given you three, but you can insert whatever you want (if you have Excel files, don't worry, they are fine, just convert them!). (only for windows, The Mac version will be available soon.)
-- The other three files are CSV datasets that I used to test, tweak, and correct everything. Feel free to use them.
-- docum_NOMDLv3.md = I added documentation of all the steps and program choices.
+You have everything you need here:
+
+- IG_Analyzer_Setup.dmg: The executable for macOS.
+- IG_Analyzer.exe: The executable for Windows.
+- IGFOREASON_NICEGUIvim.py: The Python source code. This new version uses NiceGUI—make sure to install all the necessary dependencies!
+- breast-cancer.csv: A sample CSV file ready for use.
+
+# INSTRUCTIONS
+
+How to use it?
+Simply run the executable. A local web interface will open in your browser (the developer clearly has great taste!).
+
+1. Upload: In the top right corner, upload your CSV file.
+2. Configuration: Once uploaded, the system will ask for your search parameters:
+      2a. Select what you want to explain (q).
+      2b. Select the data type for the q column.
+      2c. Set the instance and the value threshold (>=).
+      2d. Filter Features: Below, you can uncheck (de-flag) the columns you don't want to use as explanations (p).   
+4. Run: Click OK to confirm the settings. You can double-check the loaded data in the "DATA" tab.
+5. Execution: To calculate the supererogatory reasons using Shannon IG, simply click "Start/Execution".
+6. Et voilà! You will get your decision-making and supererogatory reasons. You can find them both in the interactive chart and in the left-hand container, complete with all their IG/Entropy values.
+
+Bonus Features:
+- Real-time Log: A log at the bottom tracks every single step of the process.
+- Interactive Charts: You can zoom into the graph and even download it as an image.
+
+Have fun!
+
+#LINK FOR DOWNLOAD: https://github.com/CRStefano/IGforSupererogatoryReason/releases/tag/IGFOREASON
